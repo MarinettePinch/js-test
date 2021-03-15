@@ -1,0 +1,38 @@
+.section {
+  overflow: hidden;
+  width: 100%;
+  padding: var(--section-padding);
+}
+
+.section--hidden {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.section--low {
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
+}
+
+.section--grey {
+  background-color: $secondry-background-color;
+}
+
+.section__title {
+  font-size: var(--section-title-size);
+  font-weight: $section-title-weight;
+  letter-spacing: $text-s-letter-spacing;
+  padding-bottom: var(--title-pagging-bottom);
+}
+
+.section__buttons {
+  @extend %flex-st;
+  margin-bottom: -8px;
+  padding-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: var(--title-pagging-bottom);
+    justify-content: center;
+  }
+}

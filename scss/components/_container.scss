@@ -1,0 +1,14 @@
+.container {
+  width: var(--container-width);
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+}
+
+.container--align-start {
+  text-align: start;
+}

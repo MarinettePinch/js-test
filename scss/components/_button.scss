@@ -1,0 +1,145 @@
+.button {
+  @extend %link;
+  @extend %flex-c;
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: $radius;
+  background-color: $secondry-background-color;
+  color: $primary-text-color;
+  font-size: $button-text-size-s;
+  font-weight: $button-text-weight;
+  line-height: $button-text-line-height;
+  transition: background-color $transition-animation,
+    color $transition-animation, box-shadow $transition-animation;
+  border: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-text-color;
+    color: $light-text-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.button__burger {
+  fill: currentColor;
+  display: flex;
+}
+
+.button__cross {
+  fill: currentColor;
+  display: none;
+}
+
+.button--menu {
+  @extend %flex-c;
+  color: $primary-text-color;
+  background-color: $light-text-color;
+  border: none;
+  margin-right: 8px;
+  z-index: 20;
+  transition: color $transition-animation;
+  &:hover {
+    color: $hover-text-color;
+    cursor: pointer;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  &.is-open .button__burger {
+    display: none;
+  }
+  &.is-open .button__cross {
+    display: flex;
+    z-index: 20;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.button--size-l {
+  background-color: $hover-text-color;
+  color: $light-text-color;
+  margin: 0 auto;
+  width: 200px;
+  min-height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button__span {
+  margin-right: 10px;
+}
+
+.button--round {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  padding: 0 0 0 0;
+  color: $icons-color;
+  background-color: $light-text-color;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.button--with-border {
+  color: $icons-color;
+  background-color: $light-text-color;
+  height: 90px;
+  width: 100%;
+  padding: 0 0 0 0;
+  border: 1px solid $icons-color;
+  transition: border-color $transition-animation;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $light-text-color;
+    color: $hover-text-color;
+    border-color: $hover-text-color;
+    box-shadow: none;
+  }
+}
+
+.button--inversion {
+  color: $light-text-color;
+  background-color: $icons-bg-footer-color;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.button--size-s {
+  color: $primary-text-color;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: $light-text-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color $transition-animation;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $hover-text-color;
+    background-color: $light-text-color;
+  }
+}
+
+.button--social {
+  @extend %link;
+  font-style: normal;
+  color: $hover-text-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.button__icon {
+  fill: currentColor;
+}
